@@ -24,6 +24,7 @@
 		B0FB971B1DEB302A00C0D3C4 /* kernel_memory_helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB97191DEB302A00C0D3C4 /* kernel_memory_helpers.c */; };
 		B0FB971E1DEB305700C0D3C4 /* kernel_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB971C1DEB305700C0D3C4 /* kernel_sploit.c */; };
 		B0FB97211DEB309000C0D3C4 /* jailbreak.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB971F1DEB309000C0D3C4 /* jailbreak.c */; };
+		CFEFD3351E073DD1005FBFF4 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,7 @@
 		B0FB971C1DEB305700C0D3C4 /* kernel_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kernel_sploit.c; sourceTree = "<group>"; };
 		B0FB971D1DEB305700C0D3C4 /* kernel_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kernel_sploit.h; sourceTree = "<group>"; };
 		B0FB971F1DEB309000C0D3C4 /* jailbreak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jailbreak.c; sourceTree = "<group>"; };
+		CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B0FB97111DEB2C9A00C0D3C4 /* mach_portal.entitlements */,
 				B0FB96FF1DEB2C8600C0D3C4 /* AppDelegate.swift */,
 				B0FB97011DEB2C8600C0D3C4 /* ViewController.swift */,
+				CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */,
 				B0FB97031DEB2C8600C0D3C4 /* Main.storyboard */,
 				B0FB97081DEB2C8700C0D3C4 /* LaunchScreen.storyboard */,
 				B0FB97061DEB2C8700C0D3C4 /* Assets.xcassets */,
@@ -225,6 +228,7 @@
 				B0C0FA171E01E98F00B7A3BB /* offsets.c in Sources */,
 				B0FB971E1DEB305700C0D3C4 /* kernel_sploit.c in Sources */,
 				B0FB97001DEB2C8600C0D3C4 /* AppDelegate.swift in Sources */,
+				CFEFD3351E073DD1005FBFF4 /* ConsoleView.swift in Sources */,
 				B0CFD63E1DEC751C00B76CC3 /* drop_payload.c in Sources */,
 				B0FB97211DEB309000C0D3C4 /* jailbreak.c in Sources */,
 				B0FB97181DEB2FF900C0D3C4 /* disable_protections.c in Sources */,
