@@ -87,10 +87,6 @@ void init_iPhone6_1_S5L8960X() {
 	allproc_offset = 0x5a4128;
 	kernproc_offset = 0x5aa0e0;
 }
-void init_iPhone6_2_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
 void init_iPhone7_1_T7000() {
 	allproc_offset = 0x5b4168;
 	kernproc_offset = 0x5ba0e0;
@@ -99,183 +95,20 @@ void init_iPhone7_1_S8000() {
 	allproc_offset = 0x5a4148;
 	kernproc_offset = 0x5aa0e0;
 }
-void init_iPhone7_2_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPhone7_2_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPhone8_1_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPhone8_1_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPhone8_2_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPhone8_2_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPhone8_4_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
 void init_iPhone9_1_T8010() {
 	allproc_offset = 0x5ec178;
 	kernproc_offset = 0x5f20e0;
 }
-void init_iPhone9_2_T8010() {
-	allproc_offset = 0x5ec178;
-	kernproc_offset = 0x5f20e0;
-}
-void init_iPhone9_3_T8010() {
-	allproc_offset = 0x5ec178;
-	kernproc_offset = 0x5f20e0;
-}
-void init_iPhone9_4_T8010() {
-	allproc_offset = 0x5ec178;
-	kernproc_offset = 0x5f20e0;
-}
-
-#pragma mark - iPod
-
-void init_iPod7_1_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
 
 #pragma mark - iPad
 
-void init_iPad4_1_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad4_2_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
 void init_iPad4_3_S5L8960X() {
 	allproc_offset = 0x5a4128;
 	kernproc_offset = 0x5aa0e0;
 }
-void init_iPad4_4_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad4_5_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad4_6_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad4_7_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
 void init_iPad4_7_T7001() {
 	allproc_offset = 0x5b4228;
 	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad4_7_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad4_8_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad4_8_T7001() {
-	allproc_offset = 0x5b4228;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad4_8_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad4_9_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad4_9_T7001() {
-	allproc_offset = 0x5b4228;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad4_9_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad5_1_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_1_T7001() {
-	allproc_offset = 0x5b4228;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_1_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad5_2_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_2_T7001() {
-	allproc_offset = 0x5b4228;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_2_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad5_3_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_3_T7001() {
-	allproc_offset = 0x5b4228;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_3_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad5_4_S5L8960X() {
-	allproc_offset = 0x5a4128;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad5_4_T7000() {
-	allproc_offset = 0x5b4168;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad5_4_T7001() {
-	allproc_offset = 0x5b4228;
-	kernproc_offset = 0x5ba0e0;
-}
-void init_iPad6_3_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad6_4_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad6_7_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
-}
-void init_iPad6_8_S8000() {
-	allproc_offset = 0x5a4148;
-	kernproc_offset = 0x5aa0e0;
 }
 
 #pragma mark - to add
@@ -328,7 +161,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPhone6_2_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -353,12 +186,12 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPhone7_2_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPhone7_2_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -368,12 +201,12 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPhone8_1_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPhone8_1_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -383,12 +216,12 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPhone8_2_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPhone8_2_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -398,7 +231,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPhone8_4_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -418,7 +251,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T8010")) {
 			printf("device %s matched\n", model);
-			init_iPhone9_2_T8010();
+			init_iPhone9_1_T8010(); // Same offsets.
 			return;
 		}
 	}
@@ -428,7 +261,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T8010")) {
 			printf("device %s matched\n", model);
-			init_iPhone9_3_T8010();
+			init_iPhone9_1_T8010(); // Same offsets.
 			return;
 		}
 	}
@@ -438,7 +271,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T8010")) {
 			printf("device %s matched\n", model);
-			init_iPhone9_4_T8010();
+			init_iPhone9_1_T8010(); // Same offsets.
 			return;
 		}
 	}
@@ -450,7 +283,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPod7_1_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 	}
@@ -462,7 +295,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_1_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -472,7 +305,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_2_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -482,7 +315,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_3_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -492,7 +325,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_4_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -502,7 +335,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_5_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -512,7 +345,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_6_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -522,7 +355,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad4_7_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
@@ -532,7 +365,7 @@ void init_offsets() {
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_7_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -542,17 +375,17 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad4_8_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
 			printf("device %s matched\n", model);
-			init_iPad4_8_T7001();
+			init_iPad4_7_T7001(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_8_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -562,17 +395,17 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad4_9_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
 			printf("device %s matched\n", model);
-			init_iPad4_9_T7001();
+			init_iPad4_7_T7001(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad4_9_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -582,17 +415,17 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad5_1_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
 			printf("device %s matched\n", model);
-			init_iPad5_1_T7001();
+			init_iPad4_7_T7001(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad5_1_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -602,17 +435,17 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad5_2_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
 			printf("device %s matched\n", model);
-			init_iPad5_2_T7001();
+			init_iPad4_7_T7001(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad5_2_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -622,17 +455,17 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad5_3_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
 			printf("device %s matched\n", model);
-			init_iPad5_3_T7001();
+			init_iPad4_7_T7001(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad5_3_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -642,17 +475,17 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7000")) {
 			printf("device %s matched\n", model);
-			init_iPad5_4_T7000();
+			init_iPhone7_1_T7000(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_T7001")) {
 			printf("device %s matched\n", model);
-			init_iPad5_4_T7001();
+			init_iPad4_7_T7001(); // Same offsets.
 			return;
 		}
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S5L8960X")) {
 			printf("device %s matched\n", model);
-			init_iPad5_4_S5L8960X();
+			init_iPhone6_1_S5L8960X(); // Same offsets.
 			return;
 		}
 	}
@@ -662,7 +495,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPad6_3_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -672,7 +505,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPad6_4_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -682,7 +515,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPad6_7_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
@@ -692,7 +525,7 @@ void init_offsets() {
 	if (strstr(u.machine, model)) {
 		if (strstr(u.version, "root:xnu-3789.22.3~1/RELEASE_ARM64_S8000")) {
 			printf("device %s matched\n", model);
-			init_iPad6_8_S8000();
+			init_iPhone7_1_S8000(); // Same offsets.
 			return;
 		}
 	}
