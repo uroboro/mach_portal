@@ -51,7 +51,7 @@ Contents:
 
  * In the capabilities view scroll down to the App Groups section, remove the existing App Group ("group.mach_portal") and add a new unique one (eg "group.ios.test.account.mach_portal")
 
- * open jailbreak.c and change the app_group variable to this new app group id.
+ * ~~open jailbreak.c and change the app_group variable to this new app group id.~~
 
  * on the iDevice go to settings -> General -> Device Management and select your apple ID and click trust
 

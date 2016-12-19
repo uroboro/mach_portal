@@ -26,7 +26,6 @@
 		B0FB97211DEB309000C0D3C4 /* jailbreak.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB971F1DEB309000C0D3C4 /* jailbreak.c */; };
 		CFEFD3351E073DD1005FBFF4 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */; };
 		CFEFD3361E077C41005FBFF4 /* mach_portal.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = B0FB97111DEB2C9A00C0D3C4 /* mach_portal.entitlements */; };
-		CFEFD3381E078138005FBFF4 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = CFEFD3371E078138005FBFF4 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,7 +73,6 @@
 		B0FB971D1DEB305700C0D3C4 /* kernel_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kernel_sploit.h; sourceTree = "<group>"; };
 		B0FB971F1DEB309000C0D3C4 /* jailbreak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jailbreak.c; sourceTree = "<group>"; };
 		CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
-		CFEFD3371E078138005FBFF4 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 		B0FB96F31DEB2C8600C0D3C4 = {
 			isa = PBXGroup;
 			children = (
-				CFEFD3371E078138005FBFF4 /* LICENSE.md */,
 				B0FB96FE1DEB2C8600C0D3C4 /* mach_portal */,
 				B0FB96FD1DEB2C8600C0D3C4 /* Products */,
 			);
@@ -231,7 +228,6 @@
 				B0FB97141DEB2EB900C0D3C4 /* sandbox_escape.c in Sources */,
 				B0CFD6381DEC438100B76CC3 /* patch_amfid.c in Sources */,
 				B0C0FA171E01E98F00B7A3BB /* offsets.c in Sources */,
-				CFEFD3381E078138005FBFF4 /* LICENSE.md in Sources */,
 				B0FB971E1DEB305700C0D3C4 /* kernel_sploit.c in Sources */,
 				B0FB97001DEB2C8600C0D3C4 /* AppDelegate.swift in Sources */,
 				CFEFD3351E073DD1005FBFF4 /* ConsoleView.swift in Sources */,

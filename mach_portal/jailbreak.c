@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include <objc/message.h>
+#include <CoreFoundation/CoreFoundation.h>
 
 #include "sandbox_escape.h"
 #include "kernel_sploit.h"
@@ -12,13 +14,17 @@
 #include "offsets.h"
 #include "kernel_memory_helpers.h"
 
-/* CHANGE ME */
-// change this to your unique app group id
-char* app_group = "group.mach_portal";
-
 int jb_go() {
   // do platform detection
   init_offsets();
+  
+  // dynamically get the App Group from bundled entitlement file
+  id bundle = objc_msgSend((id)objc_getClass("NSBundle"), sel_registerName("mainBundle"));
+  id path = objc_msgSend(bundle, sel_registerName("pathForResource:ofType:"), CFSTR("mach_portal"), CFSTR("entitlements"));
+  id dict = objc_msgSend(objc_msgSend((id)objc_getClass("NSDictionary"), sel_registerName("alloc")), sel_registerName("initWithContentsOfFile:"), path);
+  id array = objc_msgSend(dict, sel_registerName("objectForKey:"), CFSTR("com.apple.security.application-groups"));
+  id suiteName = objc_msgSend(array, sel_registerName("firstObject"));
+  char * app_group = (char *)objc_msgSend(suiteName, sel_registerName("UTF8String"));
   
   // exploit the urefs saturation bug; target launchd to impersonate a service
   // and get the task port for a root service and use that to get the host_priv port
