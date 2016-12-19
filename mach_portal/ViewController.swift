@@ -15,8 +15,8 @@ class ViewController: UIViewController {
 	var hostname: UITextField?
 	var port: UITextField?
 	
-	let defaultHost: String = "localhost"
-	let defaultPort: Int = 4141
+	let defaultHost = "localhost"
+	let defaultPort = 4141
 
     override func viewDidLoad() {
         super.viewDidLoad()
