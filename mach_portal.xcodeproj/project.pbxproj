@@ -24,6 +24,7 @@
 		B0FB971B1DEB302A00C0D3C4 /* kernel_memory_helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB97191DEB302A00C0D3C4 /* kernel_memory_helpers.c */; };
 		B0FB971E1DEB305700C0D3C4 /* kernel_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB971C1DEB305700C0D3C4 /* kernel_sploit.c */; };
 		B0FB97211DEB309000C0D3C4 /* jailbreak.c in Sources */ = {isa = PBXBuildFile; fileRef = B0FB971F1DEB309000C0D3C4 /* jailbreak.c */; };
+		CF35B8561E08CE8D006B5655 /* AppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35B8551E08CE8D006B5655 /* AppGroup.m */; };
 		CFEFD3351E073DD1005FBFF4 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */; };
 		CFEFD3361E077C41005FBFF4 /* mach_portal.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = B0FB97111DEB2C9A00C0D3C4 /* mach_portal.entitlements */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		B0FB971C1DEB305700C0D3C4 /* kernel_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kernel_sploit.c; sourceTree = "<group>"; };
 		B0FB971D1DEB305700C0D3C4 /* kernel_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kernel_sploit.h; sourceTree = "<group>"; };
 		B0FB971F1DEB309000C0D3C4 /* jailbreak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jailbreak.c; sourceTree = "<group>"; };
+		CF35B8551E08CE8D006B5655 /* AppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroup.m; sourceTree = "<group>"; };
+		CF35B8571E08CF72006B5655 /* AppGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppGroup.h; sourceTree = "<group>"; };
 		CFEFD3341E073DD1005FBFF4 /* ConsoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,8 @@
 				B0FB97191DEB302A00C0D3C4 /* kernel_memory_helpers.c */,
 				B0FB97121DEB2EB900C0D3C4 /* mach_portal-Bridging-Header.h */,
 				B0FB971F1DEB309000C0D3C4 /* jailbreak.c */,
+				CF35B8571E08CF72006B5655 /* AppGroup.h */,
+				CF35B8551E08CE8D006B5655 /* AppGroup.m */,
 			);
 			path = mach_portal;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C0F9FE1DF4200900B7A3BB /* cdhash.c in Sources */,
+				CF35B8561E08CE8D006B5655 /* AppGroup.m in Sources */,
 				B0FB97021DEB2C8600C0D3C4 /* ViewController.swift in Sources */,
 				B0FB971B1DEB302A00C0D3C4 /* kernel_memory_helpers.c in Sources */,
 				B0FB97141DEB2EB900C0D3C4 /* sandbox_escape.c in Sources */,

