@@ -26,9 +26,6 @@ extern uint64_t struct_task_itk_space_offset;
 // offsets in struct ipc_space
 extern uint64_t struct_ipc_space_is_table_offset;
 
-// offsets in struct ipc_port
-extern uint64_t struct_ipc_port_ip_kobject_offset;
-
 void init_offsets();
 
 #endif

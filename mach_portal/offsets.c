@@ -30,9 +30,6 @@ uint64_t struct_task_itk_space_offset;
 // offsets in struct ipc_space
 uint64_t struct_ipc_space_is_table_offset;
 
-// offsets in struct ipc_port
-uint64_t struct_ipc_port_ip_kobject_offset;
-
 #pragma mark - arm64
 
 void init_arm64() {
@@ -52,8 +49,6 @@ void init_arm64() {
 	struct_task_itk_space_offset = 0x300;
 	
 	struct_ipc_space_is_table_offset = 0x20;
-	
-	struct_ipc_port_ip_kobject_offset = 0x68;
 }
 
 #pragma mark - macOS
@@ -77,8 +72,6 @@ void init_macos_10_12_1() {
 	struct_task_itk_space_offset = 0x300;
 	
 	struct_ipc_space_is_table_offset = 0x18;
-	
-	struct_ipc_port_ip_kobject_offset = 0x68;
 }
 
 #pragma mark - iOS
